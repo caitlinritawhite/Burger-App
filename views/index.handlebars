@@ -1,6 +1,11 @@
-<h1>Burgers!</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Burgers!</h1>
+    <p class="lead">Add or Devour a Burger!</p>
+  </div>
+</div>
 
- <h2 class="list-title">Not devoured:</h2>
+ <h2 class="list-title">Devoured:</h2>
       <ul class="list-content" id="not-d-list">
         {{#each burgers}}
           {{#unless devoured}}
@@ -9,7 +14,7 @@
         {{/each}}
       </ul>
 
-<h2 class="list-title ">Devoured:</h2>
+<h2 class="list-title ">Not Devoured:</h2>
       <ul class="list-content" id="d-list">
         {{#each burgers}}
           {{#if devoured}}
