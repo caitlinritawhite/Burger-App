@@ -1,11 +1,36 @@
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid header" style="background-color: #C66433">
   <div class="container">
-    <h1 class="display-4">Burgers!</h1>
+    <img class="burger-img" src="/assets/images/burger-img.png">
+    <h1 class="display-4">Welcome to the Burger Bar!</h1>
     <p class="lead">Add or Devour a Burger!</p>
+    
   </div>
 </div>
 
- <h2 class="list-title">Devoured:</h2>
+  <div class="card bg-light mb-3 add-burger" style="margin-right:20%; margin-left: 20%;">
+  <div class="card-header" style="background-color: #C66433; color: white;">Add Burger</div>
+  <div class="card-body">
+    <form class="create-form">
+
+  <div class="form-group">
+    <span><label for="br">Burger Name:</label><br>
+    <input type="text" id="br" name="name"></span>
+  </div>
+   <button type="submit" class="btn burger-btn" style="background-color: #C66433; color: white;">Add Burger</button>
+</form>
+</div>
+</div>
+</div>
+  
+
+
+
+
+
+  <div class="burger-lists mt-5 d-flex flex-column flex-sm-row justify-content-between">
+    <div class="card bg-light mb-3 ">
+    <div class="undevoured-list list-box my-2 my-sm-0 mr-sm-2">
+      <h2 class="list-title">Not devoured:</h2>
       <ul class="list-content" id="not-d-list">
         {{#each burgers}}
           {{#unless devoured}}
@@ -13,8 +38,11 @@
           {{/unless}}
         {{/each}}
       </ul>
+    </div>
+    </div>
 
-<h2 class="list-title ">Not Devoured:</h2>
+ <div class="card bg-light mb-3 devoured-list list-box my-2 my-sm-0 ml-sm-2">
+      <h2 class="list-title ">Devoured:</h2>
       <ul class="list-content" id="d-list">
         {{#each burgers}}
           {{#if devoured}}
@@ -22,15 +50,6 @@
           {{/if}}
         {{/each}}
       </ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="br">Burger Name:</label>
-    <input type="text" id="br" name="name">
-  </div>
-
-
-  <button type="submit">Add Burger</button>
-</form>
+    </div>
+    </div>
+  
